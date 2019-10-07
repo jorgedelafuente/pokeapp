@@ -1,6 +1,11 @@
 import React from "react";
 import axios from "axios";
-import { Pokecard } from "../Pokecard/Pokecard";
+import { Pokecard } from "./Pokecard/Pokecard";
+import PokedexHome from "./PokeHomeScreen/PokedexHome";
+import Loader from "../../../src/components/Loader/Loader";
+import { Button } from "rebass";
+
+import "./Pokedex.scss";
 
 interface PokedatabaseProps {
    PokemonTeamSize: number;
@@ -26,29 +31,23 @@ class Pokedatabase extends React.Component<
          loading: false,
          pokemon: JSON.parse(window.localStorage.getItem("pokemon")!) || []
       };
-      this.handleClick = this.handleClick.bind(this);
+      this.getPokemonTeam = this.getPokemonTeam.bind(this);
+      this.resetPokemonTeam = this.resetPokemonTeam.bind(this);
    }
-   //    this.seenJokes = new Set(this.state.jokes.map(j => j.text));
-   //    console.log(this.seenJokes);
-
-   //    componentDidMount() {
-   //       console.log(this.state.jokes.length);
-   //       if (this.state.jokes.length === 0) {
-   //          console.log("from api");
-   //          this.getJokes();
-   //       } else {
-   //          console.log("from localstorage");
-   //          //  this.getJokes();
-   //       }
-   //    }
-   handleClick() {
+   getPokemonTeam() {
       this.setState({ loading: true }, this.getPokemon);
+   }
+
+   resetPokemonTeam() {
+      window.localStorage.clear();
+      window.location.href = "/";
    }
 
    async getPokemon() {
       let numberArray: Array<number> = [];
       while (numberArray.length < this.props.PokemonTeamSize) {
-         let number = Math.floor(Math.random() * 807) + 1;
+         let number =
+            Math.floor(Math.random() * this.props.PokemonTotalAmount) + 1;
          if (numberArray.indexOf(number) === -1) {
             numberArray.push(number);
          }
@@ -69,23 +68,26 @@ class Pokedatabase extends React.Component<
          });
          window.localStorage.setItem("pokemon", JSON.stringify(pokemon));
       }
-      console.log(pokemon);
    }
    render() {
       if (this.state.loading) {
          return (
-            <div className='spinner'>
-               <i className='fas fa-8x fa-spinner fa-spin' />
-               {/* <i className='fas fa-8x fa-sync fa-spin' /> */}
-               <h3>Loading</h3>
-            </div>
+            <>
+               <PokedexHome
+                  text={"Pokemon Team Builder"}
+                  onClick={this.getPokemonTeam}
+               />
+               <Loader />
+            </>
          );
       } else if (!this.state.loading && this.state.pokemon.length > 1) {
-         console.log(this.state.pokemon);
+         // console.log(this.state.pokemon);
          return (
             <>
-               <div>Pokemon Team</div>
-               <button onClick={this.handleClick}>Get New Pokemon Team</button>
+               <PokedexHome
+                  text={"Pokemon Team"}
+                  onClick={this.getPokemonTeam}
+               />
                {this.state.pokemon.map(p => (
                   <Pokecard
                      key={p.id}
@@ -99,13 +101,18 @@ class Pokedatabase extends React.Component<
                      species={p.species.name}
                   />
                ))}
+               <Button onClick={this.resetPokemonTeam}>
+                  Clear Pokemon Team
+               </Button>
             </>
          );
       } else {
          return (
             <>
-               <div>Pokemon Database</div>
-               <button onClick={this.handleClick}>Get New Pokemon Team</button>
+               <PokedexHome
+                  text={"Pokemon Team Builder"}
+                  onClick={this.getPokemonTeam}
+               />
             </>
          );
       }

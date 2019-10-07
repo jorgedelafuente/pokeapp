@@ -4,12 +4,6 @@ import "./Pokecard.scss";
 const PokeAPI =
    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 const PokeAPIhr = "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
-const PokeAPIB =
-   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/";
-// const PokeAPIS =
-//    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/";
-// const PokeAPIBS =
-//    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/";
 
 interface PokecardProps {
    id: number;
@@ -38,9 +32,6 @@ let capitalizeword = (word: string): string => {
 export class Pokecard extends React.Component<PokecardProps, {}> {
    render() {
       let imgSrc = `${PokeAPI}${this.props.id}.png`;
-      let imgSrcB = `${PokeAPIB}${this.props.id}.png`;
-      // let imgSrcBS = `${PokeAPIBS}${this.props.id}.png`;
-      // let imgSrcS = `${PokeAPIS}${this.props.id}.png`;
       let imgSrchr = `${PokeAPIhr}${convertThreeDigitNumber(
          this.props.id
       )}.png`;
@@ -68,9 +59,6 @@ export class Pokecard extends React.Component<PokecardProps, {}> {
                   <div className='PokeImage'>
                      <img src={imgSrchr} alt={this.props.name} />
                      <img src={imgSrc} alt={this.props.name} />
-                     <img src={imgSrcB} alt={this.props.name} />
-                     {/* <img src={imgSrcBS} alt={this.props.name} />
-                     <img src={imgSrcS} alt={this.props.name} /> */}
                   </div>
                </div>
             </div>
