@@ -1,8 +1,26 @@
-// .card {
-//     border: 2px solid black;
-// }
+.card {
+    background-image: linear-gradient(to top right, red, white);
+    border: 1px solid black;
+}
 
-// .PokeImage {
-//     background-color: azure;
-//     border: 1px solid black;
-// }
+.cardFont {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.25rem;
+
+}
+
+.cardHeader {
+    font-weight: bold;
+    // text-decoration: underline
+}
+
+.imgAvatar {
+    border: 1px solid black;
+    background-color: white
+}
+
+.imgMain {
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: white;
+}

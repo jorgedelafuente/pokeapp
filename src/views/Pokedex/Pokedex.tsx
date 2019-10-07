@@ -40,7 +40,7 @@ class Pokedatabase extends React.Component<
 
    resetPokemonTeam() {
       window.localStorage.clear();
-      window.location.href = "/";
+      window.location.href = "/pokeapp/";
    }
 
    async getPokemon() {
@@ -101,8 +101,8 @@ class Pokedatabase extends React.Component<
                      species={p.species.name}
                   />
                ))}
-               <Button onClick={this.resetPokemonTeam}>
-                  Clear Pokemon Team
+               <Button mt={3} mb={3} onClick={this.resetPokemonTeam}>
+                  Reset Pokemon Team
                </Button>
             </>
          );
