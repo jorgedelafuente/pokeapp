@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/pokeapp/static/css/main.227574a7.chunk.css",
-    "main.js": "/pokeapp/static/js/main.b55155b0.chunk.js",
-    "main.js.map": "/pokeapp/static/js/main.b55155b0.chunk.js.map",
+    "main.css": "/pokeapp/static/css/main.f54ab172.chunk.css",
+    "main.js": "/pokeapp/static/js/main.3b256e10.chunk.js",
+    "main.js.map": "/pokeapp/static/js/main.3b256e10.chunk.js.map",
     "runtime-main.js": "/pokeapp/static/js/runtime-main.92728d64.js",
     "runtime-main.js.map": "/pokeapp/static/js/runtime-main.92728d64.js.map",
-    "static/js/2.538e0a41.chunk.js": "/pokeapp/static/js/2.538e0a41.chunk.js",
-    "static/js/2.538e0a41.chunk.js.map": "/pokeapp/static/js/2.538e0a41.chunk.js.map",
+    "static/js/2.d2930f24.chunk.js": "/pokeapp/static/js/2.d2930f24.chunk.js",
+    "static/js/2.d2930f24.chunk.js.map": "/pokeapp/static/js/2.d2930f24.chunk.js.map",
     "index.html": "/pokeapp/index.html",
-    "precache-manifest.8edebdac9d25c49c744326ba582660a8.js": "/pokeapp/precache-manifest.8edebdac9d25c49c744326ba582660a8.js",
+    "precache-manifest.762c616cee3d6a721136d1bd6d1953b6.js": "/pokeapp/precache-manifest.762c616cee3d6a721136d1bd6d1953b6.js",
     "service-worker.js": "/pokeapp/service-worker.js",
-    "static/css/main.227574a7.chunk.css.map": "/pokeapp/static/css/main.227574a7.chunk.css.map",
+    "static/css/main.f54ab172.chunk.css.map": "/pokeapp/static/css/main.f54ab172.chunk.css.map",
     "static/media/PokemonLogo.jpg": "/pokeapp/static/media/PokemonLogo.8831bbff.jpg",
     "static/media/pokeicon.png": "/pokeapp/static/media/pokeicon.9264d5ec.png"
   },
   "entrypoints": [
     "static/js/runtime-main.92728d64.js",
-    "static/js/2.538e0a41.chunk.js",
-    "static/css/main.227574a7.chunk.css",
-    "static/js/main.b55155b0.chunk.js"
+    "static/js/2.d2930f24.chunk.js",
+    "static/css/main.f54ab172.chunk.css",
+    "static/js/main.3b256e10.chunk.js"
   ]
 }
