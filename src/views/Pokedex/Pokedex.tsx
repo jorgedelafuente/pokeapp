@@ -4,6 +4,7 @@ import { Pokecard } from "./Pokecard/Pokecard";
 import PokedexHome from "./PokeHomeScreen/PokedexHome";
 import Loader from "../../../src/components/Loader/Loader";
 import { Button } from "rebass";
+import PokeTrainerImage from "./PokeHomeScreen/PokedexHomeImage";
 
 import "./Pokedex.scss";
 
@@ -113,6 +114,7 @@ class Pokedatabase extends React.Component<
                   text={"Pokemon Team Builder"}
                   onClick={this.getPokemonTeam}
                />
+               <PokeTrainerImage />
             </>
          );
       }
