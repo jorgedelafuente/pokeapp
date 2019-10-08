@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pokeapp/static/css/main.a3c38462.chunk.css",
+    "main.css": "/pokeapp/static/css/main.8c9298ee.chunk.css",
     "main.js": "/pokeapp/static/js/main.93be3bfb.chunk.js",
     "main.js.map": "/pokeapp/static/js/main.93be3bfb.chunk.js.map",
     "runtime-main.js": "/pokeapp/static/js/runtime-main.92728d64.js",
@@ -8,9 +8,9 @@
     "static/js/2.208f2fdc.chunk.js": "/pokeapp/static/js/2.208f2fdc.chunk.js",
     "static/js/2.208f2fdc.chunk.js.map": "/pokeapp/static/js/2.208f2fdc.chunk.js.map",
     "index.html": "/pokeapp/index.html",
-    "precache-manifest.ca10b039d338dc87f0739bf9b9b82fe1.js": "/pokeapp/precache-manifest.ca10b039d338dc87f0739bf9b9b82fe1.js",
+    "precache-manifest.483fae2ff13dfa968b667c3c8aacc8c7.js": "/pokeapp/precache-manifest.483fae2ff13dfa968b667c3c8aacc8c7.js",
     "service-worker.js": "/pokeapp/service-worker.js",
-    "static/css/main.a3c38462.chunk.css.map": "/pokeapp/static/css/main.a3c38462.chunk.css.map",
+    "static/css/main.8c9298ee.chunk.css.map": "/pokeapp/static/css/main.8c9298ee.chunk.css.map",
     "static/media/PokemonLogo.jpg": "/pokeapp/static/media/PokemonLogo.8831bbff.jpg",
     "static/media/pokeicon.png": "/pokeapp/static/media/pokeicon.9264d5ec.png",
     "static/media/poketrainer.jpg": "/pokeapp/static/media/poketrainer.d3ba7a64.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.92728d64.js",
     "static/js/2.208f2fdc.chunk.js",
-    "static/css/main.a3c38462.chunk.css",
+    "static/css/main.8c9298ee.chunk.css",
     "static/js/main.93be3bfb.chunk.js"
   ]
 }
