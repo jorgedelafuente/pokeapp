@@ -41,12 +41,15 @@ export class Pokecard extends React.Component<PokecardProps, {}> {
             <Card mt={2} width={[320, 480]} mx='auto'>
                <div className='card cardFont'>
                   <Flex>
-                     <Box p={3} width={2 / 3}>
+                     <Box p={2} width={1 / 4}></Box>
+                     <Box width={2 / 4}>
                         <h2 className='cardHeader'>
                            {capitalizeword(this.props.name)}
                         </h2>
                      </Box>
-                     <Box p={3} width={1 / 3}>
+                     {/* </Flex>
+                  <Flex> */}
+                     <Box p={2} width={1 / 4}>
                         <Image
                            className='imgAvatar'
                            src={imgSrc}
