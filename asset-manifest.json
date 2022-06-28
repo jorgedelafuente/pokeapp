@@ -1,18 +1,15 @@
 {
   "files": {
     "main.css": "/pokeapp/static/css/main.20225f0b.css",
-    "main.js": "/pokeapp/static/js/main.0cc3d1c7.js",
+    "main.js": "/pokeapp/static/js/main.5e8a4b0d.js",
     "static/js/787.90e43d2f.chunk.js": "/pokeapp/static/js/787.90e43d2f.chunk.js",
-    "static/media/poketrainer.jpg": "/pokeapp/static/media/poketrainer.9d3a09da15827ecdf751.jpg",
-    "static/media/pokeicon.png": "/pokeapp/static/media/pokeicon.7adb910d11c0e1cedb3c.png",
-    "static/media/PokemonLogo.jpg": "/pokeapp/static/media/PokemonLogo.08bc9c26a6846487e6b9.jpg",
     "index.html": "/pokeapp/index.html",
     "main.20225f0b.css.map": "/pokeapp/static/css/main.20225f0b.css.map",
-    "main.0cc3d1c7.js.map": "/pokeapp/static/js/main.0cc3d1c7.js.map",
+    "main.5e8a4b0d.js.map": "/pokeapp/static/js/main.5e8a4b0d.js.map",
     "787.90e43d2f.chunk.js.map": "/pokeapp/static/js/787.90e43d2f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20225f0b.css",
-    "static/js/main.0cc3d1c7.js"
+    "static/js/main.5e8a4b0d.js"
   ]
 }
