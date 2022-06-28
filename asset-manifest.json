@@ -1,24 +1,18 @@
 {
   "files": {
-    "main.css": "/pokeapp/static/css/main.8c9298ee.chunk.css",
-    "main.js": "/pokeapp/static/js/main.93be3bfb.chunk.js",
-    "main.js.map": "/pokeapp/static/js/main.93be3bfb.chunk.js.map",
-    "runtime-main.js": "/pokeapp/static/js/runtime-main.92728d64.js",
-    "runtime-main.js.map": "/pokeapp/static/js/runtime-main.92728d64.js.map",
-    "static/js/2.208f2fdc.chunk.js": "/pokeapp/static/js/2.208f2fdc.chunk.js",
-    "static/js/2.208f2fdc.chunk.js.map": "/pokeapp/static/js/2.208f2fdc.chunk.js.map",
+    "main.css": "/pokeapp/static/css/main.20225f0b.css",
+    "main.js": "/pokeapp/static/js/main.0cc3d1c7.js",
+    "static/js/787.90e43d2f.chunk.js": "/pokeapp/static/js/787.90e43d2f.chunk.js",
+    "static/media/poketrainer.jpg": "/pokeapp/static/media/poketrainer.9d3a09da15827ecdf751.jpg",
+    "static/media/pokeicon.png": "/pokeapp/static/media/pokeicon.7adb910d11c0e1cedb3c.png",
+    "static/media/PokemonLogo.jpg": "/pokeapp/static/media/PokemonLogo.08bc9c26a6846487e6b9.jpg",
     "index.html": "/pokeapp/index.html",
-    "precache-manifest.483fae2ff13dfa968b667c3c8aacc8c7.js": "/pokeapp/precache-manifest.483fae2ff13dfa968b667c3c8aacc8c7.js",
-    "service-worker.js": "/pokeapp/service-worker.js",
-    "static/css/main.8c9298ee.chunk.css.map": "/pokeapp/static/css/main.8c9298ee.chunk.css.map",
-    "static/media/PokemonLogo.jpg": "/pokeapp/static/media/PokemonLogo.8831bbff.jpg",
-    "static/media/pokeicon.png": "/pokeapp/static/media/pokeicon.9264d5ec.png",
-    "static/media/poketrainer.jpg": "/pokeapp/static/media/poketrainer.d3ba7a64.jpg"
+    "main.20225f0b.css.map": "/pokeapp/static/css/main.20225f0b.css.map",
+    "main.0cc3d1c7.js.map": "/pokeapp/static/js/main.0cc3d1c7.js.map",
+    "787.90e43d2f.chunk.js.map": "/pokeapp/static/js/787.90e43d2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.92728d64.js",
-    "static/js/2.208f2fdc.chunk.js",
-    "static/css/main.8c9298ee.chunk.css",
-    "static/js/main.93be3bfb.chunk.js"
+    "static/css/main.20225f0b.css",
+    "static/js/main.0cc3d1c7.js"
   ]
 }
