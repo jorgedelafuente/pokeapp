@@ -1,12 +1,11 @@
 import "./PokedexHome.scss";
-import PokeTrainerImage from "../../../images/poketrainer.jpg";
 
 const PokedexHomeImage = () => {
   return (
     <div>
       <img
         className="pokeTrainerImage"
-        src={PokeTrainerImage}
+        src={process.env.PUBLIC_URL + "/images/poketrainer.jpg"}
         alt="pokemon_trainer_amiibo"
       />
     </div>

@@ -1,5 +1,4 @@
 import { Image, Box } from "rebass";
-import PokeLogo from "../../images/PokemonLogo.jpg";
 import "./PokeLogo.scss";
 
 const PokedexHome = () => {
@@ -12,7 +11,7 @@ const PokedexHome = () => {
         }}
         textAlign="center"
         className="PokeLogo"
-        src={PokeLogo}
+        src={process.env.PUBLIC_URL + "/images/PokemonLogo.jpg"}
         alt="PokeLogo"
       />
     </Box>

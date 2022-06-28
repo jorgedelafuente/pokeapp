@@ -1,6 +1,4 @@
 import { Flex } from "rebass";
-
-import PokeIcon from "../../images/pokeicon.png";
 import "./Loader.scss";
 
 const Loader = () => {
@@ -9,7 +7,11 @@ const Loader = () => {
       <br />
       <h3 className="loaderText">Generating Pokemon Team...</h3>
       <br />
-      <img className="PokeIcon rotate" src={PokeIcon} alt="PokeLogo" />
+      <img
+        className="PokeIcon rotate"
+        src={process.env.PUBLIC_URL + "/images/pokeicon.png"}
+        alt="PokeIcon"
+      />
     </Flex>
   );
 };
