@@ -1,27 +1,25 @@
 {
   "name": "pokeapp",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "homepage": "https://jorgedelafuente.github.io/pokeapp/",
   "dependencies": {
+    "@emotion/react": "^11.9.3",
     "@rebass/preset": "^4.0.5",
-    "@types/jest": "24.0.18",
-    "@types/node": "12.7.11",
-    "@types/react": "16.9.5",
-    "@types/react-dom": "16.9.1",
-    "@types/rebass": "^4.0.1",
-    "emotion-theming": "^10.0.19",
-    "gh-pages": "^2.1.1",
-    "node-sass": "^4.12.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "rebass": "^4.0.6",
-    "tslint": "^5.20.0",
-    "tslint-react": "^4.1.0",
-    "typescript": "^3.6.3"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/rebass": "^4.0.10",
+    "emotion-theming": "^11.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "rebass": "^4.0.7",
+    "sass": "^1.53.0",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,7 +31,9 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app"
+    ]
   },
   "browserslist": {
     "production": [
@@ -48,6 +48,9 @@
     ]
   },
   "devDependencies": {
-    "axios": "^0.19.0"
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "axios": "^0.27.2",
+    "gh-pages": "^4.0.0"
   }
 }

@@ -1,13 +1,22 @@
-import React from "react";
+import { Image, Box } from "rebass";
 import PokeLogo from "../../images/PokemonLogo.jpg";
 import "./PokeLogo.scss";
 
 const PokedexHome = () => {
-   return (
-      <>
-         <img className='PokeLogo' src={PokeLogo} alt='PokeLogo' />
-      </>
-   );
+  return (
+    <Box>
+      <Image
+        sx={{
+          width: ["300px"],
+          borderRadius: 8,
+        }}
+        textAlign="center"
+        className="PokeLogo"
+        src={PokeLogo}
+        alt="PokeLogo"
+      />
+    </Box>
+  );
 };
 
 export default PokedexHome;
