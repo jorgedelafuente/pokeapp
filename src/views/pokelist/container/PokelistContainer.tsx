@@ -4,6 +4,7 @@ import { convertThreeDigitNumber, imageBaseUrl } from "@/utils";
 
 const PokelistContainer = () => {
   const { data } = useGetPokemonQuery(null);
+  console.log("TCL: PokelistContainer -> data", data);
   return (
     <>
       {data &&
