@@ -1,7 +1,6 @@
+import { apiSlice } from "@/services/apiSlice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-
-import { apiSlice } from "../services/apiSlice";
 
 const rootReducer = combineReducers({
   [apiSlice.reducerPath]: apiSlice.reducer,

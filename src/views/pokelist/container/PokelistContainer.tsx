@@ -1,18 +1,9 @@
-import Card from "../../../components/card/Card";
-import { imageBaseUrl } from "../../../services";
-import { useGetPokemonQuery } from "../../../services/apiSlice";
-
-let convertThreeDigitNumber = (number: number): any => {
-  if (number < 100) {
-    return `00${number}`.slice(-3);
-  } else {
-    return number;
-  }
-};
+import { Card } from "@/components";
+import { useGetPokemonQuery } from "@/services";
+import { convertThreeDigitNumber, imageBaseUrl } from "@/utils";
 
 const PokelistContainer = () => {
   const { data } = useGetPokemonQuery(null);
-  console.log("TCL: data", data);
   return (
     <div>
       {data &&
@@ -21,6 +12,7 @@ const PokelistContainer = () => {
             <h2>{item.name}</h2>
             <div>{item.url}</div>
             <img
+              loading="lazy"
               src={imageBaseUrl + convertThreeDigitNumber(index + 1) + ".png"}
               alt=""
             />
