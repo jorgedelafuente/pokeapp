@@ -70,4 +70,6 @@ h6 {
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --primary-background-gradient: linear-gradient(to top left, red, white);
 }

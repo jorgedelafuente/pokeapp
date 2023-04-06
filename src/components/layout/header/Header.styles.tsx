@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   padding: 20px;
-  background-image: linear-gradient(to top left, red, white);
+  background-image: var(--primary-background-gradient);
   display: flex;
   align-items: center;
   height: 140px;
+
   .header-image {
     width: 75px;
     height: 75px;

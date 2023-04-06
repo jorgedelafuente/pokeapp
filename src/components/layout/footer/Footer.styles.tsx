@@ -5,4 +5,5 @@ export const StyledFooter = styled.footer`
   height: 50px;
   text-align: center;
   filter: blur(1px);
+  background-image: var(--primary-background-gradient);
 `;
