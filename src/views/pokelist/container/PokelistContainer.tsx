@@ -5,7 +5,7 @@ import { convertThreeDigitNumber, imageBaseUrl } from "@/utils";
 const PokelistContainer = () => {
   const { data } = useGetPokemonQuery(null);
   return (
-    <div>
+    <>
       {data &&
         data.results.map((item, index) => (
           <Card key={item.url}>
@@ -18,7 +18,7 @@ const PokelistContainer = () => {
             />
           </Card>
         ))}
-    </div>
+    </>
   );
 };
 

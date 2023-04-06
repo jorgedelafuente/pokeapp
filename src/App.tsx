@@ -1,5 +1,4 @@
-import Header from "./components/layout/header/Header";
-import Layout from "./components/layout/layout/Layout";
+import { Footer, Header, Layout } from "./components";
 import { PokelistContainer } from "./views/pokelist";
 
 function App() {
@@ -9,6 +8,7 @@ function App() {
       <Layout>
         <PokelistContainer />
       </Layout>
+      <Footer />
     </>
   );
 }
