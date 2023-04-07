@@ -8,7 +8,6 @@ export const CardContentWrapper = styled.div`
   }
 
   img {
-    /* padding-top: 10px; */
     background: var(--primary-background-gradient);
     clip-path: circle(50%);
     cursor: pointer;

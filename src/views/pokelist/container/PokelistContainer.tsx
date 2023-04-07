@@ -1,10 +1,18 @@
-import { Card } from "@/components";
+import { Card, Footer } from "@/components";
 import { useGetPokemonQuery } from "@/services";
 import CardContent from "../components/CardContent";
+import Button from "@/components/button/Button";
 
 const PokelistContainer = () => {
   const { data } = useGetPokemonQuery(null);
-  // console.log("TCL: PokelistContainer -> data", data);
+
+  const nextPage = data?.next;
+  const prevPage = data?.previous;
+
+  const fetchNewPageData = (pathPage: string) => {
+    console.log("TCL: fetchNewPageData -> pathPage", pathPage);
+  };
+
   return (
     <>
       {data &&
@@ -13,6 +21,20 @@ const PokelistContainer = () => {
             <CardContent item={item} index={index} />
           </Card>
         ))}
+      <Footer>
+        {nextPage && (
+          <Button
+            buttonText="Next Page"
+            onClick={() => fetchNewPageData(nextPage)}
+          />
+        )}
+        {prevPage && (
+          <Button
+            buttonText="Next Page"
+            onClick={() => fetchNewPageData(prevPage)}
+          />
+        )}
+      </Footer>
     </>
   );
 };
