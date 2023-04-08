@@ -1,5 +1,8 @@
 import Button from "@/components/button/Button";
-import { PaginationBarContainer } from "./PaginationBar.styles";
+import {
+  PaginationBarContainer,
+  CurrentPageContainer,
+} from "./PaginationBar.styles";
 
 interface PaginationBarProps {
   nextPage?: number;
@@ -23,7 +26,12 @@ const PaginationBar = ({ fetchNewPageData, nextPage }: PaginationBarProps) => {
           disabled={calculateCurrentPage(nextPage) <= 1}
         />
       )}
-      {nextPage && <>Current Page : {calculateCurrentPage(nextPage)}</>}
+      {nextPage && (
+        <CurrentPageContainer>
+          <p>Current Page</p>
+          <div>{calculateCurrentPage(nextPage)}</div>
+        </CurrentPageContainer>
+      )}
       {nextPage && (
         <Button
           buttonText="Next Page"

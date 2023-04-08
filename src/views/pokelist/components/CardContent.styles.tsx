@@ -6,6 +6,9 @@ export const CardContentWrapper = styled.div`
     text-transform: capitalize;
     text-align: center;
     padding-bottom: 2rem;
+    font-size: 2rem;
+    margin: 0;
+    -webkit-text-stroke: 1px red;
   }
 
   img {
