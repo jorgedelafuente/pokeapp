@@ -6,10 +6,12 @@ export const StyledButton = styled.button`
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
   border: 2px solid black;
+  font-weight: 600;
 
   &:hover {
     cursor: pointer;
-    border: 2px solid green;
+    border: 2px solid white;
+    box-shadow: 2px 2px 8px red;
   }
 
   &:active {

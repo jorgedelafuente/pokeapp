@@ -13,4 +13,7 @@ export const StyledFooter = styled.footer`
   img {
     height: 50px;
   }
+  img:hover {
+    transform: scale(1.25);
+  }
 `;

@@ -8,7 +8,8 @@ export const CardContentWrapper = styled.div`
     padding-bottom: 2rem;
     font-size: 2rem;
     margin: 0;
-    -webkit-text-stroke: 1px red;
+    color: red;
+    -webkit-text-stroke: 1px black;
   }
 
   img {
