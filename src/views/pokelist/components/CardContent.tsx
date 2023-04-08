@@ -13,7 +13,7 @@ const CardContent = ({ item }: { item: PokeAPI.NamedAPIResource }) => {
           convertThreeDigitNumber(getIdFromUrl(item.url)) +
           ".png"
         }
-        alt=""
+        alt="pokemon-image"
       />
     </CardContentWrapper>
   );

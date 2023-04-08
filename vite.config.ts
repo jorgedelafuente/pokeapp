@@ -11,7 +11,7 @@ const vitestConfig: VitestUserConfigInterface = {
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: ["./tests/setup.ts"],
+    setupFiles: ["./src/__tests__/setup.ts"],
     // testMatch: ["./src/**/*.test.tsx"],
   },
 };
