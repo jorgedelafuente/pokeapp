@@ -1,4 +1,13 @@
-import { convertThreeDigitNumber } from "./converters";
+import {
+  convertThreeDigitNumber,
+  getIdFromUrl,
+  getPageFromURLPath,
+} from "./converters";
 import { imageBaseUrl } from "./images";
 
-export { convertThreeDigitNumber, imageBaseUrl };
+export {
+  convertThreeDigitNumber,
+  imageBaseUrl,
+  getIdFromUrl,
+  getPageFromURLPath,
+};

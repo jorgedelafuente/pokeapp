@@ -1,25 +1,22 @@
 import { PokeAPI } from "pokeapi-types";
-import { convertThreeDigitNumber, imageBaseUrl } from "@/utils";
+import { convertThreeDigitNumber, imageBaseUrl, getIdFromUrl } from "@/utils";
 import { CardContentWrapper } from "./CardContent.styles";
 
-const CardContext = ({
-  item,
-  index,
-}: {
-  item: PokeAPI.NamedAPIResource;
-  index: number;
-}) => {
+const CardContent = ({ item }: { item: PokeAPI.NamedAPIResource }) => {
   return (
     <CardContentWrapper>
       <h2>{item.name}</h2>
-      {/* <div>{item.url}</div> */}
       <img
         loading="lazy"
-        src={imageBaseUrl + convertThreeDigitNumber(index + 1) + ".png"}
+        src={
+          imageBaseUrl +
+          convertThreeDigitNumber(getIdFromUrl(item.url)) +
+          ".png"
+        }
         alt=""
       />
     </CardContentWrapper>
   );
 };
 
-export default CardContext;
+export default CardContent;

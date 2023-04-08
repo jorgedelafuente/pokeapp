@@ -8,6 +8,7 @@ function App() {
       <Layout>
         <PokelistContainer />
       </Layout>
+      <Footer />
     </>
   );
 }

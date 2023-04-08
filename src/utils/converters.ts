@@ -5,3 +5,12 @@ export const convertThreeDigitNumber = (number: number): any => {
     return number;
   }
 };
+
+export const getIdFromUrl = (url: string) => {
+  return Number(url.slice(34, -1));
+};
+
+export const getPageFromURLPath = (url: String | undefined) => {
+  if (!url) return;
+  return Number(url.slice(41, -9));
+};

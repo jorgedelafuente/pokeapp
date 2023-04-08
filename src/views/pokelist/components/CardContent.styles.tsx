@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CardContentWrapper = styled.div`
+  height: 300px;
   h2 {
     text-transform: capitalize;
     text-align: center;

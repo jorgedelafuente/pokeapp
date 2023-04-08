@@ -1,40 +1,29 @@
-import { Card, Footer } from "@/components";
-import { useGetPokemonQuery } from "@/services";
-import CardContent from "../components/CardContent";
-import Button from "@/components/button/Button";
+import { useEffect } from "react";
+import { useLazyGetPokemonByPageQuery } from "@/services/apiSlice";
+import { getPageFromURLPath } from "@/utils";
+import PokeList from "../components/PokeList";
+import PaginationBar from "../components/PaginationBar";
+
+const PAGE_ONE = 0;
 
 const PokelistContainer = () => {
-  const { data } = useGetPokemonQuery(null);
+  const [fetchNewPage, { data }] = useLazyGetPokemonByPageQuery();
+  useEffect(() => {
+    fetchNewPage(PAGE_ONE);
+  }, []);
 
-  const nextPage = data?.next;
-  const prevPage = data?.previous;
-
-  const fetchNewPageData = (pathPage: string) => {
-    console.log("TCL: fetchNewPageData -> pathPage", pathPage);
+  const fetchNewPageData = (pageNum: number) => {
+    fetchNewPage(pageNum);
   };
 
   return (
     <>
-      {data &&
-        data.results.map((item, index) => (
-          <Card key={item.url}>
-            <CardContent item={item} index={index} />
-          </Card>
-        ))}
-      <Footer>
-        {nextPage && (
-          <Button
-            buttonText="Next Page"
-            onClick={() => fetchNewPageData(nextPage)}
-          />
-        )}
-        {prevPage && (
-          <Button
-            buttonText="Next Page"
-            onClick={() => fetchNewPageData(prevPage)}
-          />
-        )}
-      </Footer>
+      <PaginationBar
+        fetchNewPageData={fetchNewPageData}
+        nextPage={getPageFromURLPath(data?.next)}
+      />
+
+      {data && <PokeList data={data} />}
     </>
   );
 };
