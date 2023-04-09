@@ -26,3 +26,5 @@ export const {
   useGetPokemonByPageQuery,
   useLazyGetPokemonByPageQuery,
 } = apiSlice;
+
+export default apiSlice;

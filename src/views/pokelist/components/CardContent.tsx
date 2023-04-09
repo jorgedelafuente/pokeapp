@@ -4,7 +4,7 @@ import { CardContentWrapper } from "./CardContent.styles";
 
 const CardContent = ({ item }: { item: PokeAPI.NamedAPIResource }) => {
   return (
-    <CardContentWrapper>
+    <CardContentWrapper data-testid="list-item">
       <h2>{item.name}</h2>
       <img
         loading="lazy"
