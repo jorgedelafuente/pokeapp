@@ -5,7 +5,7 @@ import { CardContentWrapper } from "./CardContent.styles";
 const CardContent = ({ item }: { item: PokeAPI.NamedAPIResource }) => {
   return (
     <CardContentWrapper data-testid="list-item">
-      <h2>{item.name}</h2>
+      <h3>{item.name}</h3>
       <img
         loading="lazy"
         src={
@@ -13,7 +13,7 @@ const CardContent = ({ item }: { item: PokeAPI.NamedAPIResource }) => {
           convertThreeDigitNumber(getIdFromUrl(item.url)) +
           ".png"
         }
-        alt="pokemon-image"
+        alt={item.name}
       />
     </CardContentWrapper>
   );

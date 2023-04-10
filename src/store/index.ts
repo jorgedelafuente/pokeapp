@@ -4,8 +4,7 @@ import {
   AppDispatch,
   AppStore,
   setupStore,
-  // createStore,
-} from "./store";
+ } from "./store";
 
 export {
   useAppDispatch,
@@ -14,5 +13,4 @@ export {
   type AppDispatch,
   type AppStore,
   setupStore,
-  // createStore,
-};
+ };

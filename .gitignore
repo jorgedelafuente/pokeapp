@@ -24,3 +24,4 @@ yarn-error.log*
 backup
 todo.md
 /dist
+dist

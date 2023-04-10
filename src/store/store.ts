@@ -13,26 +13,10 @@ export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(apiSlice.middleware),
-    devTools: process.env.NODE_ENV !== "production",
     preloadedState,
   });
 };
 
-// export const createStore = () =>
-//   configureStore({
-//     reducer: rootReducer,
-//     middleware: (getDefaultMiddleware) =>
-//       getDefaultMiddleware().concat(apiSlice.middleware),
-//     devTools: process.env.NODE_ENV !== "production",
-//   });
-
-// export const store = createStore();
-// setupListeners(createStore().dispatch);
-
-// export type RootState = ReturnType<typeof store.getState>;
-// export type AppDispatch = typeof store.dispatch;
-
-export const store = setupStore();
 setupListeners(setupStore().dispatch);
 
 export type RootState = ReturnType<typeof rootReducer>;
