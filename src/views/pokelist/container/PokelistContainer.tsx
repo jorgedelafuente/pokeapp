@@ -1,6 +1,7 @@
 import Card from "../../../components/card/Card";
 import { imageBaseUrl } from "../../../services";
 import { useGetPokemonQuery } from "../../../services/apiSlice";
+import styles from "./PokelistContainer.module.css";
 
 let convertThreeDigitNumber = (number: number): any => {
   if (number < 100) {
@@ -14,7 +15,7 @@ const PokelistContainer = () => {
   const { data } = useGetPokemonQuery(null);
   console.log("TCL: data", data);
   return (
-    <div>
+    <div className={styles.grid}>
       {data &&
         data.results.map((item, index) => (
           <Card key={item.url}>
