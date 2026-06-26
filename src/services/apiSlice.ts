@@ -1,5 +1,10 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { PokeAPI } from "pokeapi-types";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import {
+  NamedAPIResourceList,
+  NamedAPIResourceListSchema,
+  Pokemon,
+  PokemonSchema,
+} from "../schemas/pokemon";
 
 export const apiSlice = createApi({
   reducerPath: "apiSlice",
@@ -8,11 +13,14 @@ export const apiSlice = createApi({
   }),
   tagTypes: ["Posts"],
   endpoints: (builder) => ({
-    getPokemon: builder.query<PokeAPI.NamedAPIResourceList, null>({
+    getPokemon: builder.query<NamedAPIResourceList, null>({
       query: () => "/pokemon",
+      transformResponse: (raw: unknown) =>
+        NamedAPIResourceListSchema.parse(raw),
     }),
-    getPokemonById: builder.query({
+    getPokemonById: builder.query<Pokemon, number>({
       query: (id: number) => `/pokemon/${id}`,
+      transformResponse: (raw: unknown) => PokemonSchema.parse(raw),
     }),
   }),
 });

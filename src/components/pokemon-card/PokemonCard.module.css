@@ -1,0 +1,142 @@
+:root {
+  --color-text-muted: #888;
+  --color-text-secondary: #555;
+  --color-sprite-bg: #f7f7f7;
+  --color-content-bg: white;
+  --color-shadow-subtle: rgba(0, 0, 0, 0.12);
+  --color-section-gradient-from: #e0e0e0;
+  --color-section-gradient-to: #efefef;
+  --color-tag-bg: #eee;
+}
+
+.nameRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 6px;
+}
+
+.pokemonName {
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.pokedexId {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.spriteArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background-color: var(--color-sprite-bg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 4px;
+  padding: 0 8px;
+}
+
+.sprite {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.content {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-content-bg);
+  padding: 1rem;
+  box-shadow: 0 -4px 12px var(--color-shadow-subtle);
+  overflow-y: auto;
+}
+
+.sectionHeader {
+  background: linear-gradient(
+    to right,
+    var(--color-section-gradient-from),
+    var(--color-section-gradient-to),
+    transparent
+  );
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 10px 0 4px;
+}
+
+.typeList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.typeTag {
+  background: var(--color-tag-bg);
+  border-radius: 12px;
+  padding: 1px 8px;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+}
+
+.statList {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3px 12px;
+  margin: 0;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  text-transform: capitalize;
+}
+
+.statValue {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.abilityList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.abilityItem {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+}
+
+.hiddenBadge {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  margin-left: 4px;
+}
+
+.sizeRow {
+  display: flex;
+  gap: 20px;
+  font-size: 0.7rem;
+}
