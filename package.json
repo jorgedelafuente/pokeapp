@@ -19,10 +19,10 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
-    "@vitejs/plugin-react-swc": "^3.0.0",
+    "@vitejs/plugin-react-swc": "^4.0.0",
     "pokeapi-types": "^0.0.1",
     "typescript": "^4.9.3",
-    "vite": "^4.2.0",
-    "vitest": "^0.29.8"
+    "vite": "^6.4.3",
+    "vitest": "^3.2.6"
   }
 }
