@@ -12,10 +12,10 @@ export const createStore = () =>
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(apiSlice.middleware),
-    devTools: process.env.NODE_ENV !== "production",
+    devTools: !import.meta.env.PROD,
   });
 export const store = createStore();
-setupListeners(createStore().dispatch);
+setupListeners(store.dispatch);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

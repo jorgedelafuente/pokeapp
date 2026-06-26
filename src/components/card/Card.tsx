@@ -1,7 +1,7 @@
-import { StyledCard } from "./Card.styles";
+import styles from "./Card.module.css";
 
 const Card = ({ children }: { children: React.ReactNode }) => {
-  return <StyledCard>{children}</StyledCard>;
+  return <article className={styles.card}>{children}</article>;
 };
 
 export default Card;

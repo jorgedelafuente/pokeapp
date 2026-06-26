@@ -1,7 +1,7 @@
-import { StyledLayout } from "./Layout.styled";
+import styles from "./Layout.module.css";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  return <StyledLayout>{children}</StyledLayout>;
+  return <div className={styles.layout}>{children}</div>;
 };
 
 export default Layout;
