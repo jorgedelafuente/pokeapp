@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { z } from 'zod'
 import {
   NamedAPIResourceList,
   NamedAPIResourceListSchema,
@@ -11,15 +12,28 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://pokeapi.co/api/v2',
   }),
-  tagTypes: ['Posts'],
   endpoints: (builder) => ({
     getPokemon: builder.query<NamedAPIResourceList, { limit: number; offset: number }>({
       query: ({ limit, offset }) => `/pokemon?limit=${limit}&offset=${offset}`,
-      transformResponse: (raw: unknown) => NamedAPIResourceListSchema.parse(raw),
+      transformResponse: (raw: unknown) => {
+        const result = NamedAPIResourceListSchema.safeParse(raw)
+        if (!result.success) {
+          console.error(z.flattenError(result.error))
+          throw result.error
+        }
+        return result.data
+      },
     }),
     getPokemonById: builder.query<Pokemon, number>({
       query: (id: number) => `/pokemon/${id}`,
-      transformResponse: (raw: unknown) => PokemonSchema.parse(raw),
+      transformResponse: (raw: unknown) => {
+        const result = PokemonSchema.safeParse(raw)
+        if (!result.success) {
+          console.error(z.flattenError(result.error))
+          throw result.error
+        }
+        return result.data
+      },
     }),
   }),
 })

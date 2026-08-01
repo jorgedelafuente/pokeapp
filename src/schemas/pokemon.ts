@@ -26,18 +26,18 @@ export const PokemonSchema = z.object({
     back_female: z.string().nullable(),
     front_shiny_female: z.string().nullable(),
     back_shiny_female: z.string().nullable(),
-    other: z.object({
-      'official-artwork': z.object({
+    other: z.looseObject({
+      'official-artwork': z.looseObject({
         front_default: z.string().nullable(),
         front_shiny: z.string().nullable(),
       }),
-      home: z.object({
+      home: z.looseObject({
         front_default: z.string().nullable(),
         front_shiny: z.string().nullable(),
         front_female: z.string().nullable(),
         front_shiny_female: z.string().nullable(),
       }),
-      dream_world: z.object({
+      dream_world: z.looseObject({
         front_default: z.string().nullable(),
         front_female: z.string().nullable(),
       }),
