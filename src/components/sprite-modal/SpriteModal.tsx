@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import styles from './SpriteModal.module.css'
 
@@ -13,30 +13,46 @@ interface Props {
   onClose: () => void
 }
 
+const TITLE_ID = 'sprite-modal-title'
+
 const SpriteModal = ({ name, sprites, onClose }: Props) => {
+  const dialogRef = useRef<HTMLDialogElement>(null)
+
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-    }
-    document.addEventListener('keydown', onKey)
+    const dialog = dialogRef.current
+    dialog?.showModal()
     document.body.style.overflow = 'hidden'
+
+    // Close on backdrop click (target is the dialog element itself, not its children)
+    const onBackdropClick = (e: MouseEvent) => {
+      if (e.target === dialog) onClose()
+    }
+    dialog?.addEventListener('click', onBackdropClick)
+
     return () => {
-      document.removeEventListener('keydown', onKey)
+      dialog?.removeEventListener('click', onBackdropClick)
       document.body.style.overflow = ''
     }
   }, [onClose])
 
+  // Intercept native Escape so React controls unmounting
+  const handleCancel = (e: React.SyntheticEvent<HTMLDialogElement>) => {
+    e.preventDefault()
+    onClose()
+  }
+
   return createPortal(
-    <div
-      className={styles.backdrop}
-      onClick={onClose}
-      role="dialog"
-      aria-modal="true"
-      aria-label={`${name} sprites`}
+    <dialog
+      ref={dialogRef}
+      className={styles.dialog}
+      aria-labelledby={TITLE_ID}
+      onCancel={handleCancel}
     >
-      <div className={styles.panel} onClick={(e) => e.stopPropagation()}>
+      <div className={styles.panel}>
         <div className={styles.header}>
-          <h2 className={styles.title}>{name} — all sprites</h2>
+          <h2 id={TITLE_ID} className={styles.title}>
+            {name} — all sprites
+          </h2>
           <button className={styles.closeBtn} onClick={onClose} aria-label="Close">
             ✕
           </button>
@@ -50,7 +66,7 @@ const SpriteModal = ({ name, sprites, onClose }: Props) => {
           ))}
         </div>
       </div>
-    </div>,
+    </dialog>,
     document.body,
   )
 }
