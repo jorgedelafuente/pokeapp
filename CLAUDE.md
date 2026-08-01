@@ -44,4 +44,4 @@ This app uses [PokéAPI](https://pokeapi.co/api/v2). The full API documentation 
 
 **Schemas:** `src/schemas/` holds Zod schemas. Types should be derived from schemas with `z.infer<>` rather than maintained separately.
 
-**Images:** Pokemon sprites are fetched from `http://assets.pokemon.com/assets/cms2/img/pokedex/detail/{id}.png` where `id` is zero-padded to 3 digits. The base URL is exported from `src/services/index.ts`.
+**Images:** Pokemon sprites are fetched from `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{id}.png` where `id` is zero-padded to 3 digits. The base URL is exported from `src/services/index.ts`.
