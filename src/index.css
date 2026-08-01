@@ -70,4 +70,18 @@ h6 {
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --color-text-muted: #888;
+  --color-text-secondary: #555;
+  --color-sprite-bg: #f0f4f8;
+  --color-content-bg: white;
+  --color-shadow-subtle: rgba(0, 0, 0, 0.12);
+  --color-section-gradient-from: #e0e0e0;
+  --color-section-gradient-to: #efefef;
+  --color-tag-bg: #eee;
+  --color-border: #ddd;
+  --color-border-hover: #bbb;
+  --color-hover-bg: #f0f4f8;
+  --color-text-primary: #111;
+  --color-text-faint: #999;
 }
