@@ -7,6 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': `${import.meta.dirname}/src`,
+      '@shared': `${import.meta.dirname}/src/components/shared`,
     },
   },
   build: {

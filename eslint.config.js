@@ -20,5 +20,11 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
     },
   },
+  {
+    files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
+    languageOptions: {
+      globals: globals.vitest,
+    },
+  },
   prettier,
 )

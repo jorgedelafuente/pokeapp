@@ -16,9 +16,9 @@
     "jsx": "react-jsx",
     "types": ["vitest/globals"],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@shared/*": ["./src/components/shared/*"]
     }
   },
-  "include": ["src"],
-  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/test"]
+  "include": ["src"]
 }

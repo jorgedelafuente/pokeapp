@@ -1,21 +1,15 @@
 import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import styles from './SpriteModal.module.css'
-
-interface Sprite {
-  label: string
-  url: string
-}
+import styles from './Modal.module.css'
 
 interface Props {
-  name: string
-  sprites: Sprite[]
+  title: string
+  titleId?: string
   onClose: () => void
+  children: React.ReactNode
 }
 
-const TITLE_ID = 'sprite-modal-title'
-
-const SpriteModal = ({ name, sprites, onClose }: Props) => {
+const Modal = ({ title, titleId = 'modal-title', onClose, children }: Props) => {
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   useEffect(() => {
@@ -23,7 +17,6 @@ const SpriteModal = ({ name, sprites, onClose }: Props) => {
     dialog?.showModal()
     document.body.style.overflow = 'hidden'
 
-    // Close on backdrop click (target is the dialog element itself, not its children)
     const onBackdropClick = (e: MouseEvent) => {
       if (e.target === dialog) onClose()
     }
@@ -35,7 +28,6 @@ const SpriteModal = ({ name, sprites, onClose }: Props) => {
     }
   }, [onClose])
 
-  // Intercept native Escape so React controls unmounting
   const handleCancel = (e: React.SyntheticEvent<HTMLDialogElement>) => {
     e.preventDefault()
     onClose()
@@ -45,30 +37,23 @@ const SpriteModal = ({ name, sprites, onClose }: Props) => {
     <dialog
       ref={dialogRef}
       className={styles.dialog}
-      aria-labelledby={TITLE_ID}
+      aria-labelledby={titleId}
       onCancel={handleCancel}
     >
       <div className={styles.panel}>
         <div className={styles.header}>
-          <h2 id={TITLE_ID} className={styles.title}>
-            {name} — all sprites
+          <h2 id={titleId} className={styles.title}>
+            {title}
           </h2>
           <button className={styles.closeBtn} onClick={onClose} aria-label="Close">
             ✕
           </button>
         </div>
-        <div className={styles.grid}>
-          {sprites.map((s) => (
-            <div key={s.label} className={styles.spriteItem}>
-              <img src={s.url} alt={s.label} />
-              <span>{s.label}</span>
-            </div>
-          ))}
-        </div>
+        <div className={styles.content}>{children}</div>
       </div>
     </dialog>,
     document.body,
   )
 }
 
-export default SpriteModal
+export default Modal
