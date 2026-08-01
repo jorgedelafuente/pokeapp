@@ -13,8 +13,8 @@ export const apiSlice = createApi({
   }),
   tagTypes: ["Posts"],
   endpoints: (builder) => ({
-    getPokemon: builder.query<NamedAPIResourceList, null>({
-      query: () => "/pokemon",
+    getPokemon: builder.query<NamedAPIResourceList, { limit: number; offset: number }>({
+      query: ({ limit, offset }) => `/pokemon?limit=${limit}&offset=${offset}`,
       transformResponse: (raw: unknown) =>
         NamedAPIResourceListSchema.parse(raw),
     }),
