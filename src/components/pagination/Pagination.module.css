@@ -42,16 +42,18 @@
 
 .pageIndicator {
   height: 36px;
-  min-width: 80px;
-  padding: 0 10px;
+  min-width: 90px;
+  padding: 0 14px;
   border: 2px solid var(--color-pokeball);
-  border-radius: 8px;
-  background: var(--color-content-bg);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff5f3 0%, #ffeae5 50%, #fff0f0 100%);
+  box-shadow:
+    0 1px 4px rgba(227, 53, 13, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  color: var(--color-text-secondary);
 }
 
 .currentPage {
@@ -61,8 +63,9 @@
 }
 
 .totalPages {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--color-text-faint);
+  font-weight: 500;
 }
 
 @media (max-width: 560px) {
