@@ -25,6 +25,7 @@ A Pokémon browser built with React 19, Redux Toolkit, and the public [PokéAPI]
 | UI                    | React 19                                  |
 | State / data fetching | Redux Toolkit + RTK Query                 |
 | Schema / types        | Zod 4                                     |
+| Styling               | CSS Modules                               |
 | Build                 | Vite 8 + SWC                              |
 | Unit tests            | Vitest + Testing Library + MSW + jest-axe |
 | E2E tests             | Playwright                                |
@@ -101,8 +102,6 @@ e2e/                     # Playwright tests
 ## Deployment
 
 The app deploys automatically to **GitHub Pages** on every push to `master` via `.github/workflows/deploy.yml`. Vite is configured with `base: '/pokeapp/'` to match the sub-path.
-
-A `vercel.json` is also present for optional Vercel hosting.
 
 ---
 
