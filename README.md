@@ -2,6 +2,8 @@
 
 A Pokémon browser built with React 19, Redux Toolkit, and the public [PokéAPI](https://pokeapi.co). Paginate through the full Pokédex, explore stats and sprites, and enjoy a fully accessible UI.
 
+**Live:** https://jorgedelafuente.github.io/pokeapp/
+
 ![Build](https://github.com/jorgedelafuente/pokeapp/actions/workflows/deploy.yml/badge.svg)
 
 ---
