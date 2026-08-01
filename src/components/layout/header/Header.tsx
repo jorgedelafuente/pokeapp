@@ -18,7 +18,10 @@ const Header = ({ page, totalPages, onChange }: Props) => {
           <img loading="lazy" src={`${import.meta.env.BASE_URL}images/poke-logo.jpg`} />
         </div>
       </div>
-      <Pagination page={page} totalPages={totalPages} onChange={onChange} />
+      <div className={styles.paginationWrapper}>
+        <Pagination page={page} totalPages={totalPages} onChange={onChange} />
+      </div>
+      <div className={styles.spacer} />
     </header>
   )
 }

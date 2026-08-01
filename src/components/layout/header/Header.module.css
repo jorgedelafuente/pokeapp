@@ -16,6 +16,14 @@
   flex-shrink: 0;
 }
 
+.paginationWrapper {
+  margin-top: 30px;
+}
+
+.spacer {
+  flex: 0 0 196px;
+}
+
 .headerImage {
   width: 60px;
   height: 60px;
