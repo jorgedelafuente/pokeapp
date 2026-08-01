@@ -1,7 +1,7 @@
 :root {
   --color-text-muted: #888;
   --color-text-secondary: #555;
-  --color-sprite-bg: #f7f7f7;
+  --color-sprite-bg: #f0f4f8;
   --color-content-bg: white;
   --color-shadow-subtle: rgba(0, 0, 0, 0.12);
   --color-section-gradient-from: #e0e0e0;
@@ -9,58 +9,54 @@
   --color-tag-bg: #eee;
 }
 
+.layout {
+  display: flex;
+  height: 100%;
+}
+
+.spriteArea {
+  width: 40%;
+  flex-shrink: 0;
+  background-color: var(--color-sprite-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  background: var(--color-content-bg);
+  padding: 12px;
+  overflow-y: auto;
+  border-left: 1px solid #eee;
+}
+
 .nameRow {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 0 0 6px;
+  margin: 0 0 8px;
 }
 
 .pokemonName {
   text-transform: capitalize;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .pokedexId {
   color: var(--color-text-muted);
   font-size: 0.75rem;
   margin: 0;
-}
-
-.spriteArea {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background-color: var(--color-sprite-bg);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  overflow-x: auto;
-  gap: 4px;
-  padding: 0 8px;
-}
-
-.sprite {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.content {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--color-content-bg);
-  padding: 1rem;
-  box-shadow: 0 -4px 12px var(--color-shadow-subtle);
-  overflow-y: auto;
 }
 
 .sectionHeader {
@@ -72,7 +68,7 @@
   );
   padding: 2px 8px;
   border-radius: 4px;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -85,34 +81,51 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
 
 .typeTag {
   background: var(--color-tag-bg);
   border-radius: 12px;
   padding: 1px 8px;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: capitalize;
+}
+
+.statsAbilitiesRow {
+  display: flex;
+  gap: 12px;
+}
+
+.statsCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.abilitiesCol {
+  flex: 1;
+  min-width: 0;
 }
 
 .statList {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 3px 12px;
+  gap: 3px 10px;
   margin: 0;
 }
 
 .statLabel {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--color-text-secondary);
   text-transform: capitalize;
+  align-self: center;
 }
 
 .statValue {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 600;
   text-align: right;
+  align-self: center;
 }
 
 .abilityList {
@@ -121,22 +134,23 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .abilityItem {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: capitalize;
 }
 
 .hiddenBadge {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--color-text-muted);
   margin-left: 4px;
+  font-style: italic;
 }
 
 .sizeRow {
   display: flex;
-  gap: 20px;
-  font-size: 0.7rem;
+  gap: 16px;
+  font-size: 0.65rem;
 }
