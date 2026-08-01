@@ -1,17 +1,24 @@
+import Pagination from "../../pagination/Pagination";
 import styles from "./Header.module.css";
 
-const Header = () => {
+interface Props {
+  page: number;
+  totalPages: number;
+  onChange: (page: number) => void;
+}
+
+const Header = ({ page, totalPages, onChange }: Props) => {
   return (
     <header className={styles.header}>
-      <div className={styles.headerImage}>
-        <img loading="lazy" src="/images/poke-icon.png" />
-      </div>
-      <div>
+      <div className={styles.brand}>
+        <div className={styles.headerImage}>
+          <img loading="lazy" src="/images/poke-icon.png" />
+        </div>
         <div className={styles.headerLogo}>
           <img loading="lazy" src="/images/poke-logo.jpg" />
         </div>
-        <h3>React, Redux-Toolkit, TypeScript, CSS Modules</h3>
       </div>
+      <Pagination page={page} totalPages={totalPages} onChange={onChange} />
     </header>
   );
 };

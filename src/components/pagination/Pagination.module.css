@@ -3,9 +3,13 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px 20px;
-  background-image: linear-gradient(to top left, rgba(255,0,0,0.12), rgba(255,255,255,0.6));
-  border-bottom: 1px solid rgba(255,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .pagination button {
@@ -38,24 +42,30 @@
   height: 36px;
   min-width: 80px;
   padding: 0 10px;
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-pokeball);
   border-radius: 8px;
   background: var(--color-content-bg);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  font-size: 0.8rem;
   color: var(--color-text-secondary);
 }
 
 .currentPage {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--color-text-primary);
 }
 
 .totalPages {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: var(--color-text-faint);
+}
+
+@media (max-width: 560px) {
+  .pagination {
+    flex-direction: column;
+    gap: 6px;
+  }
 }
