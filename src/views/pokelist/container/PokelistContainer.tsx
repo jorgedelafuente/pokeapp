@@ -13,9 +13,10 @@ const PokelistContainer = ({ offset }: Props) => {
 
   return (
     <div className={styles.grid}>
-      {data?.results.map((item, index) => (
-        <PokemonCard key={item.url} id={offset + index + 1} />
-      ))}
+      {data?.results.map((item) => {
+        const id = Number(item.url.split("/").findLast(Boolean));
+        return <PokemonCard key={item.url} id={id} />;
+      })}
     </div>
   );
 };
