@@ -1,3 +1,3 @@
-import PokelistContainer from "./container/PokelistContainer";
+import PokelistContainer from './container/PokelistContainer'
 
-export { PokelistContainer };
+export { PokelistContainer }

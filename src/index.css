@@ -11,6 +11,8 @@
 */
 * {
   margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
 }
 /*
   3. Allow percentage-based heights in the application
@@ -18,6 +20,7 @@
 html,
 body {
   height: 100%;
+  scrollbar-gutter: stable;
 }
 /*
   Typographic tweaks!
@@ -85,4 +88,25 @@ h6 {
   --color-text-primary: #111;
   --color-text-faint: #999;
   --color-pokeball: #e3350d;
+  --color-scrollbar-track: transparent;
+  --color-scrollbar-thumb: #d0d0d0;
+  --color-scrollbar-thumb-hover: #b0b0b0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-thumb-hover);
 }

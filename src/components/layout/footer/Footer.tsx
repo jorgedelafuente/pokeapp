@@ -1,10 +1,10 @@
-import Pagination from "../../pagination/Pagination";
-import styles from "./Footer.module.css";
+import Pagination from '@/components/pagination/Pagination'
+import styles from './Footer.module.css'
 
 interface Props {
-  page: number;
-  totalPages: number;
-  onChange: (page: number) => void;
+  page: number
+  totalPages: number
+  onChange: (page: number) => void
 }
 
 const Footer = ({ page, totalPages, onChange }: Props) => {
@@ -12,7 +12,7 @@ const Footer = ({ page, totalPages, onChange }: Props) => {
     <footer className={styles.footer}>
       <Pagination page={page} totalPages={totalPages} onChange={onChange} />
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
