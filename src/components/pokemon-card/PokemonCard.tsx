@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Card from '@/components/card/Card'
+import Card from '@shared/card/Card'
 import { useGetPokemonByIdQuery } from '@/services/apiSlice'
-import SpriteModal from '../sprite-modal/SpriteModal'
+import PokemonModal from '@/components/pokemon-modal/PokemonModal'
 import styles from './PokemonCard.module.css'
 
 const STAT_LABELS: Record<string, string> = {
@@ -79,7 +79,7 @@ const PokemonCard = ({ id }: Props) => {
           </svg>
         </button>
         {showSprites && (
-          <SpriteModal
+          <PokemonModal
             name={data.name}
             sprites={allSprites}
             onClose={() => setShowSprites(false)}
