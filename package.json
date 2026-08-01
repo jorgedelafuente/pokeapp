@@ -23,6 +23,7 @@
     ],
     "*.{js,json,css,md}": "prettier --write"
   },
+  "packageManager": "pnpm@11.7.0",
   "engines": {
     "node": ">=24"
   },
@@ -39,7 +40,6 @@
     "@testing-library/jest-dom": "^7.0.0",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
-    "@types/jest-axe": "^3.5.9",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react-swc": "^4.3.3",
