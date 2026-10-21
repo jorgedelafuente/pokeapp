@@ -16,6 +16,7 @@
   padding: 24px;
   background: var(--color-sprite-bg);
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .spriteItem img {
@@ -23,6 +24,11 @@
   height: 400px;
   object-fit: contain;
   image-rendering: pixelated;
+  transition: transform 0.2s ease;
+}
+
+.spriteItem img:hover {
+  transform: scale(1.1);
 }
 
 .spriteItem span {
