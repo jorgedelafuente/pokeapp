@@ -4,5 +4,5 @@ allowBuilds:
   msw: true
 
 overrides:
-  undici: '>=8.10.2'
+  undici: '>=8.12.2'
   source-map-js: '>=1.2.2'
